@@ -2,6 +2,7 @@
 <head>
 	<title>Simple Responsive Grid</title>
 	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery.ba-throttle-debounce.min.js"></script>
 	<style type="text/css">
 	body{
 		padding:0px;
@@ -139,13 +140,18 @@
 	<script type='text/javascript'>
 	var minwidth = 250;
 	$(document).ready(function(){
-		$(window).bind("resize",function(){
-			var w = $(window).width();
-			var numberOfItems = parseInt(w/minwidth);
-			var itemWidth = w/numberOfItems;
-			$(".grid ul li").css({width:itemWidth});
-		});
-	});
+		// $(window).bind("resize",function(){
+			
+		// });
+
+	$(window).resize($.debounce(250,function(){
+		console.log('11');
+		var w = $(window).width();
+		var numberOfItems = parseInt(w/minwidth);
+		var itemWidth = w/numberOfItems;
+		$(".grid ul li").css({width:itemWidth});
+	}));
+});
 	</script>
 </body>
 </html>
