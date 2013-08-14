@@ -1,0 +1,151 @@
+<html>
+<head>
+	<title>Simple Responsive Grid</title>
+	<script src="js/jquery-1.10.2.js"></script>
+	<style type="text/css">
+	body{
+		padding:0px;
+		margin: 0px;
+	}
+	.grid{
+		width: 100%;
+	}
+
+	.grid ul{
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.grid ul li{
+		list-style-type: none;
+		float: left;
+		padding: 0px;
+		margin: 0px;
+		width: 20%;
+	}
+
+	.grid ul li img{
+		width: 100%;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="grid">
+		<ul>
+			<li>
+				<img src="http://placehold.it/300x200/3498db/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/27ae60/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/c0392b/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/8e44ad/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/e67e22/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/2c3e50/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/2980b9/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/7f8c8d/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/e67e22/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/16a085/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/bdc3c7/222" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/3498db/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/27ae60/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/c0392b/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/8e44ad/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/e67e22/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/2c3e50/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/2980b9/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/7f8c8d/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/e67e22/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/16a085/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/bdc3c7/222" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/3498db/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/27ae60/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/c0392b/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/8e44ad/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/e67e22/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/2c3e50/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/2980b9/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/7f8c8d/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/e67e22/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/16a085/eee" >
+			</li>
+			<li>
+				<img src="http://placehold.it/300x200/bdc3c7/222" >
+			</li>
+		</ul>
+	</div>
+
+	<script type='text/javascript'>
+	var minwidth = 250;
+	$(document).ready(function(){
+		$(window).bind("resize",function(){
+			var w = $(window).width();
+			var numberOfItems = parseInt(w/minwidth);
+			var itemWidth = w/numberOfItems;
+			$(".grid ul li").css({width:itemWidth});
+		});
+	});
+	</script>
+</body>
+</html>
