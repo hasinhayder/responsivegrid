@@ -141,7 +141,7 @@
 	var minwidth = 250;
 	$(document).ready(function(){
 		$(window).resize($.debounce(250,function(){
-			console.log('11');
+			//console.log('11');
 			var w = $(window).width();
 			var numberOfItems = parseInt(w/minwidth);
 			var itemWidth = w/numberOfItems;
