@@ -154,13 +154,11 @@
 	</div>
 
 	<script type='text/javascript'>
-	var minwidth = 250;
+	var minWidth = 250;
 	$(document).ready(function(){
 		$(window).resize($.debounce(250,function(){
-			//console.log('11');
 			var w = $(window).width();
-			var numberOfItems = parseInt(w/minwidth);
-			var itemWidth = w/numberOfItems;
+			var numberOfItems = parseInt(w/minWidth);
 			var itemWidthinPercentage = 100/numberOfItems;
 			$(".grid ul li").css({width:itemWidthinPercentage+"%"});
 		}));
